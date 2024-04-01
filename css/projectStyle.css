@@ -1,0 +1,94 @@
+﻿.topbar {
+  background-color: #3e0359;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10; /* Sets 'layer' to render on. Used to render in front of default elements (z-index 0) */
+}
+
+.topbar a {
+  float: left;
+  display: block;
+  padding: 6px 12px;
+  font-size: 18px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
+.topbar a:hover:not(.active) {
+  background-color: #1b0328;
+}
+
+.topbar a.active {
+  background-color: #640e8f;
+}
+
+body{margin:0;}
+
+p{
+  font-size:20px;
+  padding:20px;
+}
+h1{
+  color: #3e0359;
+  padding:20px; margin-top: -30px;
+}
+
+.pageTitle {
+  position: relative;
+}
+
+.pageTitle h1 {
+  position: absolute;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  font-size: 15vw;
+}
+
+/* Below styles are for the timeline in the Projects page
+*/
+
+.static {
+  position: absolute;
+}
+
+.static .border{
+  position: sticky;
+  top: 0;
+  width: .5vw;
+  height: 100vw;
+  background-color: black;
+  margin-left: 50vw;
+}
+
+.timeline .item{
+  position: relative;
+  padding-bottom: 400px;
+  overflow: hidden;
+}
+
+.timeline .item-text{
+  margin: 12vw;
+  width: 25vw;
+  overflow-wrap: break-word;
+  position: absolute;
+  opacity: 0;
+  text-align: left;
+}
+
+.project-desc {
+  font-size: 1.5vw;
+}
+
+.timeline .item-display{
+  overflow-wrap: break-word;
+  position: absolute;
+  left: 80%;
+  top: 10%;
+  color: white;
+}

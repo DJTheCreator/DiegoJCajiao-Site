@@ -145,15 +145,8 @@ h1{
 
 .static {
   position: absolute;
-}
-
-.static .border{
-  position: sticky;
-  top: 0;
-  width: .5vw;
-  height: 100vw;
-  background-color: black;
   margin-left: 50vw;
+  border: none;
 }
 
 .timeline .item{
@@ -163,13 +156,16 @@ h1{
 }
 
 .timeline .item-text{
-  margin: 10vw;
-  height: 40vh;
-  width: 20vw;
+  margin: 12vw;
+  width: 25vw;
   overflow-wrap: break-word;
   position: absolute;
   opacity: 0;
   text-align: left;
+}
+
+.project-desc {
+  font-size: 1.5vw;
 }
 
 .timeline .item-display{
