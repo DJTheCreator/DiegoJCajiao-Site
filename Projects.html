@@ -1,9 +1,23 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects</title>
   <link rel="stylesheet" href="css/style.css">
-  <title>About Me</title>
+  <meta name="description" content="">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
 </head>
 
 <div class="topbar">
@@ -21,10 +35,48 @@
   <h1>Projects</h1>
 </div>
 
-<p>This is the Projects page</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Diam ut venenatis tellus in metus vulputate eu scelerisque felis. Sit amet consectetur adipiscing elit. Sed id semper risus in hendrerit gravida. Quis varius quam quisque id. Morbi non arcu risus quis varius quam quisque id diam. Rhoncus mattis rhoncus urna neque viverra. Ultrices sagittis orci a scelerisque purus semper eget duis. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Leo urna molestie at elementum eu. Amet justo donec enim diam vulputate ut. Purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus.</p>
-<p>Ipsum nunc aliquet bibendum enim facilisis gravida neque. Duis ut diam quam nulla porttitor massa. Odio facilisis mauris sit amet massa vitae tortor condimentum lacinia. Adipiscing commodo elit at imperdiet. Duis at tellus at urna condimentum mattis. Maecenas sed enim ut sem. Etiam non quam lacus suspendisse faucibus interdum posuere lorem ipsum. Nisi est sit amet facilisis magna etiam. Scelerisque felis imperdiet proin fermentum leo. Enim ut sem viverra aliquet. Urna molestie at elementum eu facilisis. Lobortis mattis aliquam faucibus purus in massa tempor nec. Augue eget arcu dictum varius duis at consectetur. Pretium lectus quam id leo. Lacinia at quis risus sed vulputate. Consequat semper viverra nam libero justo. Non quam lacus suspendisse faucibus interdum posuere lorem. Commodo sed egestas egestas fringilla phasellus. Nisi est sit amet facilisis magna etiam. Bibendum at varius vel pharetra vel turpis.</p>
-<p>Sit amet consectetur adipiscing elit ut aliquam purus. Suspendisse interdum consectetur libero id faucibus nisl tincidunt. Pretium quam vulputate dignissim suspendisse in est. Eu lobortis elementum nibh tellus. Integer vitae justo eget magna fermentum iaculis. Amet commodo nulla facilisi nullam vehicula ipsum a arcu. Facilisi cras fermentum odio eu feugiat pretium nibh. Tempor id eu nisl nunc mi ipsum. Quis vel eros donec ac. Et magnis dis parturient montes nascetur ridiculus mus mauris vitae. Dictum varius duis at consectetur lorem donec massa sapien. At in tellus integer feugiat scelerisque varius. Nulla at volutpat diam ut venenatis tellus in metus.</p>
-<p>Sed velit dignissim sodales ut eu sem. Diam maecenas sed enim ut sem viverra aliquet. Donec adipiscing tristique risus nec feugiat in fermentum. Arcu non odio euismod lacinia at. Ac odio tempor orci dapibus ultrices in iaculis nunc. Quam adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus. Et egestas quis ipsum suspendisse ultrices. Leo vel orci porta non pulvinar neque. Volutpat consequat mauris nunc congue nisi vitae. Mi tempus imperdiet nulla malesuada pellentesque elit eget gravida cum. Quam vulputate dignissim suspendisse in est ante in. Arcu ac tortor dignissim convallis. Sed velit dignissim sodales ut eu. Aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices. Nisi porta lorem mollis aliquam.</p>
+<section class="timeline" id="ProjectTimeline">
+  <div class="static" style="position: absolute;">
+    <div class="border" style="position: fixed;"></div>
+  </div>
+  <div class="items" >
+    <div class="item">
+      <div class="item-text">
+        <p class="project-desc">In 2022(?) I created two mods for Blade & Sorcery. They have collectively received over 5,000 unique downloads.</p>
+      </div>
+      <div class="item-display">
+        <p style="background-color: #640e8f; width: 60px; height: 60px;">Image Here</p>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item-text">
+        <p class="project-desc">I taught myself Java and programmed the minecraft mod Features and Creatures</p>
+      </div>
+      <div class="item-display">
+        <p style="background-color: #640e8f; width: 60px; height: 60px;">Image Here</p>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item-text" id="event1">
+        <p class="project-desc">Blood Knight Unity Demo</p>
+      </div>
+      <div class="item-display">
+        <p style="background-color: #640e8f; width: 60px; height: 60px;">Image Here</p>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item-text">
+        <p class="project-desc">Zombie Construction Game in Unity</p>
+      </div>
+      <div class="item-display">
+        <p style="background-color: #640e8f; width: 60px; height: 60px;">Image Here</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>

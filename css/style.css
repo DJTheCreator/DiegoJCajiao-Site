@@ -84,6 +84,10 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+div {
+  overflow-x: hidden;
+}
+
 .topbar {
   background-color: #3e0359;
   margin: 0;
@@ -135,6 +139,42 @@ h1{
   text-align: center;
   font-size: 15vw;
 }
+
+/* Below styles are for the timeline in the Projects page
+*/
+
+/*.static .border{*/
+/*  width: .5vw;*/
+/*  height: 100vw;*/
+/*  background-color: black;*/
+/*  top: 0;*/
+/*  z-index: -1;*/
+/*  margin-left: 50vw;*/
+/*  margin-top: 38vh;*/
+/*}*/
+
+.timeline .item{
+  position: relative;
+  padding-bottom: 400px;
+}
+
+.timeline .item-text{
+  margin: 30px;
+  height: 200px;
+  width: 400px;
+  overflow-wrap: break-word;
+  position: absolute;
+  opacity: 0;
+}
+
+.timeline .item-display{
+  overflow-wrap: break-word;
+  position: absolute;
+  left: 80%;
+  top: 10%;
+  color: white;
+}
+
 
 /* ==========================================================================
    Helper classes
