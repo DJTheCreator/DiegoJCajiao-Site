@@ -143,28 +143,33 @@ h1{
 /* Below styles are for the timeline in the Projects page
 */
 
-/*.static .border{*/
-/*  width: .5vw;*/
-/*  height: 100vw;*/
-/*  background-color: black;*/
-/*  top: 0;*/
-/*  z-index: -1;*/
-/*  margin-left: 50vw;*/
-/*  margin-top: 38vh;*/
-/*}*/
+.static {
+  position: absolute;
+}
+
+.static .border{
+  position: sticky;
+  top: 0;
+  width: .5vw;
+  height: 100vw;
+  background-color: black;
+  margin-left: 50vw;
+}
 
 .timeline .item{
   position: relative;
   padding-bottom: 400px;
+  overflow: hidden;
 }
 
 .timeline .item-text{
-  margin: 30px;
-  height: 200px;
-  width: 400px;
+  margin: 10vw;
+  height: 40vh;
+  width: 20vw;
   overflow-wrap: break-word;
   position: absolute;
   opacity: 0;
+  text-align: left;
 }
 
 .timeline .item-display{
