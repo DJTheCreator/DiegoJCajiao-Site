@@ -61,9 +61,10 @@ h1{
   position: sticky;
   top: 0;
   width: .5vw;
-  height: 100vw;
+  height: 50vh;
   background-color: black;
   margin-left: 50vw;
+  z-index: -10;
 }
 
 .timeline .item{

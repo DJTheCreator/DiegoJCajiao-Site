@@ -34,9 +34,14 @@
        style="opacity: 50%; width: 100%">
   <h1>Projects</h1>
 </div>
-
+<div style="height: 10vh; position: absolute" id="timelineTrigger"></div>
 <section class="timeline" id="ProjectTimeline">
-  <iframe class="static" src="html/border.html"></iframe>
+  <div class="staticParent">
+    <iframe class="static" src="html/border.html" id="ProjectTimelineBorder"></iframe>
+  </div>
+  <div class="staticParent">
+    <iframe class="static" src="html/border.html" id="fakeEndBorder"></iframe>
+  </div>
   <div class="items" >
     <div class="item">
       <div class="item-text">
@@ -72,6 +77,8 @@
     </div>
   </div>
 </section>
+
+<div style="height: 100vh;"></div>
 
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
