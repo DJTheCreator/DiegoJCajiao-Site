@@ -81,15 +81,28 @@ textarea {
 }
 
 /* ==========================================================================
+   Color Pallete
+   ========================================================================== */
+
+:root {
+  --primary_color: #640e8f;
+  --secondary_color: #3B0764;
+  --accent_color: #4C1D95;
+  --background_color: #DCD6EB;
+  --text_color: #1F2937;
+  --text_background_color: #FAF8FF;
+}
+
+/* ==========================================================================
    Author's custom styles
    ========================================================================== */
 
-div {
+body {
   overflow-x: hidden;
 }
 
 .topbar {
-  background-color: #3e0359;
+  background-color: var(--secondary_color);
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -97,6 +110,7 @@ div {
   top: 0;
   width: 100%;
   z-index: 10; /* Sets 'layer' to render on. Used to render in front of default elements (z-index 0) */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
 }
 
 .topbar a {
@@ -107,24 +121,29 @@ div {
   color: white;
   text-align: center;
   text-decoration: none;
+  transition: background 0.2s ease
 }
 
 .topbar a:hover:not(.active) {
-  background-color: #1b0328;
+  transform: translateY(-2px);
+  background: rgba(255,255,255,0.08);
 }
 
 .topbar a.active {
-  background-color: #640e8f;
+  background: linear-gradient(135deg,var(--primary_color), var(--accent_color));
 }
 
-body{margin:0;}
+body{
+  margin:0;
+  background-color: var(--background_color);
+}
 
 p{
   font-size:20px;
   padding:20px;
 }
 h1{
-  color: #3e0359;
+  color: var(--secondary_color);
   padding:20px; margin-top: -30px;
 }
 
@@ -143,26 +162,46 @@ h1{
 /* Below styles are for the timeline in the Projects page
 */
 
+.timeline {
+  position: relative;
+}
+
+#ProjectTimelineBorder {
+  position: absolute;
+  left: calc(50vw - 0.25vw);        /* midpoint between text and images */
+  top: 0;              /* top of timeline section = already below hero image */
+  width: 2px;
+  height: 80vh;
+
+  /* Customize the border*/
+  --border_center_color_width: 20%;
+  background: linear-gradient(
+    transparent 0%,
+    var(--primary_color) var(--border_center_color_width),
+    var(--primary_color) calc(100% - var(--border_center_color_width)),
+    transparent 100%);
+  box-shadow: 0 0 6px rgba(124, 58, 237, 0.25);
+}
+
+#ProjectTimelineBorder::after{
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  background: var(--primary_color);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 12px rgba(168, 85, 247, 0.5);
+}
+
 .staticParent {
   position: absolute;
 }
 
 .enableFixed {
   position: fixed;
-}
-
-#ProjectTimelineBorder.timelineBottom  {
-  opacity: 0;
-}
-
-#fakeEndBorder:not(.timelineBottom) {
-  opacity: 0;
-  margin-top: 65vh;
-}
-
-#fakeEndBorder.timelineBottom  {
-  opacity: 1;
-  margin-top: 65vh;
 }
 
 .static {
@@ -172,31 +211,41 @@ h1{
   height: 100vh;
 }
 
-.timeline .item{
+.timeline .item {
   position: relative;
-  padding-bottom: 400px;
-  overflow: hidden;
+  height: 400px;
+  overflow: visible; /* was hidden, potentially clipping content */
+  margin-bottom: 20px;
 }
 
-.timeline .item-text{
-  margin: 12vw;
-  width: 25vw;
-  overflow-wrap: break-word;
+.timeline .item-text {
   position: absolute;
+  left: 24vw;
+  top: 50%;
+  transform: translate(-50%, -50%); /* vertically centers in item */
+  width: 20vw;
+  overflow-wrap: break-word;
   opacity: 0;
-  text-align: left;
+  text-align: center;
+  color: var(--text_color);
+
+  background: var(--text_background_color);
+  border-radius: 6px;
+  border: 1px solid var(--secondary_color);
+  box-shadow:0 12px 30px rgba(70,30,130,0.12);
 }
 
 .project-desc {
   font-size: 2vh;
 }
 
-.timeline .item-display{
-  overflow-wrap: break-word;
+.timeline .item-display {
   position: absolute;
-  left: 80%;
-  top: 10%;
+  left: 65vw;           /* moved left from 80% */
+  top: 50%;
+  transform: translateY(-50%); /* matches text alignment */
   color: white;
+  overflow-wrap: break-word;
 }
 
 
